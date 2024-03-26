@@ -24,26 +24,6 @@
 //   for (const key in user) {
 //     console.log(key, user[key])
 //   }
-  const person = {
-    firstName: 'Asabeneh',
-    lastName: 'Yetayeh',
-    age: 250,
-    country: 'Finland',
-    city: 'Helsinki',
-    skills: [
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'React',
-      'Node',
-      'MongoDB',
-      'Python',
-      'D3.js',
-    ],
-    isMarried: true,
-  }
-  console.log(person)
-
   const users = [
     {
       _id: 'ab12ex',
@@ -100,7 +80,46 @@
   const [x, y] = [2, (value) => value ** 2]
   console.log(x , y(x))
 
-  const countries = ['Finland', 'Estonia', 'Sweden', 'Norway']
-  countries.forEach(function (country, i) {
-    console.log(i, country.toUpperCase())
+  const person = {
+    firstName: 'Asabeneh',
+    lastName: 'Yetayeh',
+    age: 250,
+    country: 'Finland',
+    job: 'Instructor and Developer',
+    skills: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'React',
+      'Redux',
+      'Node',
+      'MongoDB',
+      'Python',
+      'D3.js',
+    ],
+    languages: ['Amharic', 'English', 'Suomi(Finnish)'],
+  }
+
+  const {firstName, lastName, age, country, job, skills, languages} = person
+
+  let mylanguage = ""
+  const myskill = skills.map((skill, i) => {
+    if (i >= (skills.length-1)) return `and ${skill}.`
+    return `${skill}, `
   })
+
+  languages.forEach((lang, i) => {
+    if (i >= (languages.length-1)) {mylanguage += `and ${lang}.`} 
+    else{mylanguage+=`${lang}, `}
+  })
+
+  class Person {
+    constructor(firstName, lastName) {
+       // Check the output from here
+      this.firstName = firstName
+      this.lastName = lastName
+      
+    }
+  }
+  
+  const person1 = new Person("haha", "huhu")
