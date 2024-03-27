@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30 Days Of React Challenge</title>
+    <style>
+      .header-wrapper{
+        background-color: cornflowerblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel"> 
+        const name = 'Rainnand'
+        const age = 21
+        const countries = ["jp", "us", "ph", "hhg"]
+        const obj = {
+          item1: 3.14,
+          item2: 'pipipi'
+        }
+        const list_count = countries.map((c) =><li key={c}>{c}</li>)
+        const mappedcountries = countries.map(function (country) {
+          return country.toUpperCase()
+        })
+        const elem = <h1>Hello {name} age {age + 1} object: {obj.item1} {obj.item2} {new Date().getFullYear()} </h1>
+        const header = (
+          <header >
+            <div className='header-wrapper'>
+              <p>Header now is a paragraph tag with {name} {mappedcountries}</p>
+            </div>
+          </header>
+        )
+        const div = (
+        <div>
+          <strong>
+            nice
+            {' '}
+            <em>em for emphasis!</em>
+          </strong>
+          <h1>How are you</h1>
+          <small>hi </small>
+        </div>
+        )
+        const inputField = (
+          <div>
+            <label htmlFor="firstname">Enter Firstname: </label>
+            <input type="text" id="firstname" placeholder="first name?"/>
+          </div>
+        )
+        const app = (
+          <div>
+            {header}
+            {elem}
+            {div}
+            {inputField}
+            <ul>
+              {list_count}
+            </ul>
+          </div>
+        )
+        ReactDOM.render(app, document.getElementById('root'))
+
+    </script>
+    
+  </body>
+</html>
