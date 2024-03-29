@@ -1,0 +1,15 @@
+.header-wrapper {
+    border-color: green;
+    border-width: 3px;
+    background-color: blue;
+    padding-top: 5px;
+}
+
+.image-wrapper {
+    background-color: cornflowerblue;
+    margin-top: 5px;
+}
+
+.mymy {
+    background-color: blue;
+}
